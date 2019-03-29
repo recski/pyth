@@ -600,6 +600,11 @@ class Group(object):
         self.content.append(ReadableMarker("highlight", color))
 
 
+    def handle_chcbpat(self, color):
+        if color != '8':
+            self.content.append(ReadableMarker("highlight", color))
+
+
     def handle_strike(self, onOff=None):
         val = onOff in (None, "", "1")
         self.content.append(ReadableMarker("strike", val))
